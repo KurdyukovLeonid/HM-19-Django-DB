@@ -20,8 +20,3 @@ class Game(models.Model):
 
     def __str__(self):
         return self.title
-for buyer in Buyer.objects.all():
-    print(f'Buyer: {buyer.name}, Age: {buyer.age}, Games: {[game.title for game in buyer.games.all()]}')
-
-for game in Game.objects.all():
-    print(f'Game: {game.title}, Buyers: {[buyer.name for buyer in game.buyers.all()]}')
